@@ -1,0 +1,6 @@
+- id: manage-commit-msg
+  name: manage-commit-msg
+  description: Saves/Restores commit messages from gitlint failures
+  entry: manage-commit-msg
+  language: script
+  stages: [prepare-commit-msg, commit-msg]
