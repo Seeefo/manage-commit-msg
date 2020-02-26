@@ -13,6 +13,7 @@ def main():
                 continue
             lines.append(f"# {line}")
     if lines:
+        lines.insert(1,"\n")
         with open('.git/pre-commit-saved-commit-msg','w') as f:
             f.write("# Previous Commit Message:\n")
             f.writelines(lines)
