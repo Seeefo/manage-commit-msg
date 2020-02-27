@@ -13,7 +13,8 @@ def main():
                 continue
             lines.append(f"# {line}")
     if lines:
-        lines.insert(1,"\n")
+        lines.insert(1,"\n") # add a new line after the title
+        lines.insert(-1,"\n") # Add a new line at the beginning of the commit message
         with open('.git/pre-commit-saved-commit-msg','w') as f:
             f.write("# Previous Commit Message:\n")
             f.writelines(lines)
